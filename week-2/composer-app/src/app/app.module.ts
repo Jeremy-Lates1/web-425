@@ -1,3 +1,11 @@
+/**
+ * Title: app.module.ts
+ * Author: Jeremy Lates
+ * Date: 03/30/2024
+ * Description: App module
+ * Note:
+ * Code is adapted from https://github.com/buwebdev/web-425/blob/master/week-2/composer-app/src/app/app.module.ts
+ */
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -12,13 +20,10 @@ import { AboutComponent } from './about/about.component';
     AppComponent,
     ComposerListComponent,
     ContactComponent,
-    AboutComponent
+    AboutComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
