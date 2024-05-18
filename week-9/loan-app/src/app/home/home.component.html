@@ -1,0 +1,61 @@
+<div fxLayout="row" fxLayoutGap="10">
+  <div fxFlex="50%">
+    <!-- <p>first div</p> -->
+
+    <mat-card-content>
+      <form fxLayout="column" fxLayoutGap="16px">
+        <mat-form-field appearance="fill">
+          <mat-label>Loan Amount</mat-label>
+          <input
+            type="text"
+            name="txtLoanAmt"
+            id="txtLoanAmt"
+            matInput
+            [(ngModel)]="loanAmt"
+          />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Interest Rate</mat-label>
+          <input
+            type="text"
+            name="txtInterestRate"
+            id="txtInterestRate"
+            matInput
+            [(ngModel)]="interestRate"
+          />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Number of Years</mat-label>
+          <input
+            type="text"
+            name="txtYears"
+            id="txtYears"
+            matInput
+            [(ngModel)]="years"
+          />
+        </mat-form-field>
+        <button mat-raised-button color="primary" (click)="calculateEntry()">
+          Calculate
+        </button>
+      </form>
+    </mat-card-content>
+  </div>
+  <div fxFlex="50%">
+    <mat-card-content>
+      <mat-label>Your Monthly Payment</mat-label>
+      <br />
+      <br />
+
+      <mat-label class="ResultsFont">{{ monthlyPayment }}</mat-label>
+    </mat-card-content>
+
+    <mat-card-content>
+      <mat-label>Interest Paid</mat-label>
+      <br />
+      <br />
+      <mat-label class="ResultsFont">{{ totalInterestPaid }}</mat-label>
+    </mat-card-content>
+  </div>
+</div>
